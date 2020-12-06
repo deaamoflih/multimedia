@@ -7,10 +7,9 @@ node {
   stage('Build and Anlyzing multi') {
   
         withSonarQubeEnv('sonarqube') {
-        def mvnHome = tool name: 'mvn', type: 'maven' 
          def scannerHome = tool 'sonarqube';
   
-       sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectName='dev' -Dsonar.projectKey='dev' -Dsonar.sources='./' -Dsonar.language=java   " 
+       sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectName='dev' -Dsonar.projectKey='dev' -Dsonar.sources='./' -Dsonar.language=java -Dsonar.java.binaries=* -Dsonar.branch.name=master " 
   
            
                 }
