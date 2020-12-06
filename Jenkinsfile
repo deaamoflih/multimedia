@@ -9,7 +9,7 @@ node {
         withSonarQubeEnv('sonarqube') {
          def scannerHome = tool 'sonarqube';
   
-       sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectName='dev' -Dsonar.projectKey='dev' -Dsonar.sources='./' -Dsonar.language=java -Dsonar.java.binaries=* -Dsonar.branch.name=master -Dsonar.scm.provider=disable " 
+       sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectName='dev' -Dsonar.projectKey='dev' -Dsonar.sources='./' -Dsonar.language=java -Dsonar.java.binaries=* -Dsonar.branch.name=new " 
   
            
                 }
