@@ -1,6 +1,6 @@
 #/bin/sh
 
 
-HP=${bamboo.pass}
+HP=$bamboo.pass
 
-echp $HP
+echo $HP
