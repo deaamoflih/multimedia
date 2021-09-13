@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testing
+spec:
+  replicas: 1
+  selector:
+  strategy: { }
+  template:
+    spec:
+      containers:
+        - image: custom:testing-@project.version@
+          imagePullPolicy: Always
+          name: testing
